@@ -1,0 +1,254 @@
+/* General Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Color palette */
+:root {
+  --primary: #009688;
+  --secondary: #f0f4f8;
+  --light: #ffffff;
+  --dark: #222831;
+  --accent: #4db6ac;
+  --text: #333;
+}
+
+/* Navbar */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: var(--light);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #009688, #004d40);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  color: #cfe8e6;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #e0f2f1;
+}
+
+/* Section Base */
+.section {
+  padding: 4rem 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+/* About Section */
+#about {
+  background-color: var(--secondary);
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1 1 40%;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.about-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.about-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Projects Section */
+#projects {
+  background-color: #e1f5fe;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.project-card p {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.project-links a {
+  display: inline-block;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: var(--light);
+  background-color: var(--primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.project-links a:hover {
+  background-color: var(--accent);
+}
+
+.tags span {
+  display: inline-block;
+  background-color: #e0f2f1;
+  color: #00796b;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #fce4ec;
+  text-align: center;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+}
+
+.contact-card i {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.contact-card a {
+  text-decoration: none;
+  color: var(--dark);
+  transition: color 0.3s;
+}
+
+.contact-card a:hover {
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-cards {
+    width: 90%;
+    margin: auto;
+  }
+}
